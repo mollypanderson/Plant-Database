@@ -11,6 +11,14 @@
 		ADF868DE2B99269A0039C5EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868DD2B99269A0039C5EC /* ContentView.swift */; };
 		ADF868E02B99269C0039C5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF868DF2B99269C0039C5EC /* Assets.xcassets */; };
 		ADF868E32B99269C0039C5EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF868E22B99269C0039C5EC /* Preview Assets.xcassets */; };
+		ADF868EA2B99317E0039C5EC /* PlantImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868E92B99317E0039C5EC /* PlantImage.swift */; };
+		ADF868EC2B9936F80039C5EC /* plantData.json in Resources */ = {isa = PBXBuildFile; fileRef = ADF868EB2B9936F80039C5EC /* plantData.json */; };
+		ADF868EE2B9937500039C5EC /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868ED2B9937500039C5EC /* Plant.swift */; };
+		ADF868F02B993FD70039C5EC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868EF2B993FD70039C5EC /* ModelData.swift */; };
+		ADF868F52B9940D20039C5EC /* PlantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F42B9940D20039C5EC /* PlantRow.swift */; };
+		ADF868F72B9949A00039C5EC /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F62B9949A00039C5EC /* PlantList.swift */; };
+		ADF868F92B994AFE0039C5EC /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F82B994AFE0039C5EC /* PlantDetail.swift */; };
+		ADF868FB2B9958210039C5EC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868FA2B9958210039C5EC /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		ADF868DD2B99269A0039C5EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADF868DF2B99269C0039C5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADF868E22B99269C0039C5EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADF868E92B99317E0039C5EC /* PlantImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImage.swift; sourceTree = "<group>"; };
+		ADF868EB2B9936F80039C5EC /* plantData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plantData.json; sourceTree = "<group>"; };
+		ADF868ED2B9937500039C5EC /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		ADF868EF2B993FD70039C5EC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		ADF868F42B9940D20039C5EC /* PlantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRow.swift; sourceTree = "<group>"; };
+		ADF868F62B9949A00039C5EC /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
+		ADF868F82B994AFE0039C5EC /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
+		ADF868FA2B9958210039C5EC /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,10 @@
 		ADF868DA2B99269A0039C5EC /* Plant Database */ = {
 			isa = PBXGroup;
 			children = (
+				ADF868F32B99408F0039C5EC /* Model */,
+				ADF868F22B9940810039C5EC /* Resources */,
+				ADF868F12B9940570039C5EC /* Views */,
 				ADF868DB2B99269A0039C5EC /* Plant_DatabaseApp.swift */,
-				ADF868DD2B99269A0039C5EC /* ContentView.swift */,
 				ADF868DF2B99269C0039C5EC /* Assets.xcassets */,
 				ADF868E12B99269C0039C5EC /* Preview Content */,
 			);
@@ -65,6 +83,52 @@
 				ADF868E22B99269C0039C5EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADF868F12B9940570039C5EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADF868FD2B9958CD0039C5EC /* Helper */,
+				ADF868FC2B9958C80039C5EC /* Plants */,
+				ADF868DD2B99269A0039C5EC /* ContentView.swift */,
+				ADF868F42B9940D20039C5EC /* PlantRow.swift */,
+				ADF868F62B9949A00039C5EC /* PlantList.swift */,
+				ADF868F82B994AFE0039C5EC /* PlantDetail.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADF868F22B9940810039C5EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADF868EB2B9936F80039C5EC /* plantData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADF868F32B99408F0039C5EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADF868EF2B993FD70039C5EC /* ModelData.swift */,
+				ADF868ED2B9937500039C5EC /* Plant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADF868FC2B9958C80039C5EC /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plants;
+			sourceTree = "<group>";
+		};
+		ADF868FD2B9958CD0039C5EC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				ADF868E92B99317E0039C5EC /* PlantImage.swift */,
+				ADF868FA2B9958210039C5EC /* FavoriteButton.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +191,7 @@
 			files = (
 				ADF868E32B99269C0039C5EC /* Preview Assets.xcassets in Resources */,
 				ADF868E02B99269C0039C5EC /* Assets.xcassets in Resources */,
+				ADF868EC2B9936F80039C5EC /* plantData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF868DE2B99269A0039C5EC /* ContentView.swift in Sources */,
+				ADF868EE2B9937500039C5EC /* Plant.swift in Sources */,
+				ADF868F02B993FD70039C5EC /* ModelData.swift in Sources */,
+				ADF868FB2B9958210039C5EC /* FavoriteButton.swift in Sources */,
 				ADF868DC2B99269A0039C5EC /* Plant_DatabaseApp.swift in Sources */,
+				ADF868F52B9940D20039C5EC /* PlantRow.swift in Sources */,
+				ADF868EA2B99317E0039C5EC /* PlantImage.swift in Sources */,
+				ADF868F92B994AFE0039C5EC /* PlantDetail.swift in Sources */,
+				ADF868F72B9949A00039C5EC /* PlantList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
