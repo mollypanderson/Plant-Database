@@ -10,7 +10,7 @@ import SwiftUI
 struct PlantList: View {
     @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
-    
+
     var filteredPlants: [Plant] {
         modelData.plants.filter { plant in
             (!showFavoritesOnly || plant.isFavorite)
@@ -18,24 +18,22 @@ struct PlantList: View {
     }
     
     var body: some View {
-        NavigationSplitView {
+        NavigationView {
             List {
-                Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites only")
-                }
-                ForEach(filteredPlants) { plant in
-                    NavigationLink {
+                ForEach(filteredPlants) {
+                    plant in NavigationLink {
                         PlantDetail(plant: plant)
                     } label: {
                         PlantRow(plant: plant)
                     }
+                    
                 }
+                
             }
+        
             .animation(.default, value: filteredPlants)
             .navigationTitle("my plant database")
             
-        } detail: {
-            Text("Select a plant")
         }
         .fontWeight(.light)
     }

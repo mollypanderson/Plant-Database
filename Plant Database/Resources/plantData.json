@@ -1,6 +1,6 @@
 [
     {
-        "commonName": "Bird of Paradise A",
+        "commonName": "Bird of Paradise",
         "scientificName": "Strelitzia nicolai",
         "dateAdopted": "8/21/2023",
         "adoptedFrom": "Lowe's North Seattle",
@@ -10,7 +10,7 @@
         "isFeatured": true,
         "isFavorite": true,
         "wateringDates": ["3/5", "2/27", "2/19", "2/6"],
-        "nextSoilCheck": "3/10/2023",
+        "nextSoilCheck": "4/14/2024",
         "fertilizerDates": ["2/19", "12/21", "11/28"],
         "nextFertilizer": "3/19",
         "repottingHistory": ["9/2023"],
