@@ -45,6 +45,7 @@ struct ContentView: View {
             UITabBar.appearance().unselectedItemTintColor = UIColor(red: 153 / 255, green: 153 / 255, blue: 153 / 255, alpha: 1)
         }
         .tint(Color(red: 185 / 255, green: 203 / 255, blue: 157 / 255))
+        
     }
 }
 

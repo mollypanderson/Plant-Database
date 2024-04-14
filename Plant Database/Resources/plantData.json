@@ -13,7 +13,9 @@
         "nextSoilCheck": "4/14/2024",
         "fertilizerDates": ["2/19", "12/21", "11/28"],
         "nextFertilizer": "3/19",
-        "repottingHistory": ["9/2023"],
+        "repottingHistory": [1693526400],
+        "repottingCadenceInDays": 365,
+        "nextRepotDate": 1725174000,
         "notes": "add misc notes here",
         "imageName": "bopapic"
     },
@@ -31,7 +33,9 @@
         "nextSoilCheck": "3/10",
         "fertilizerDates": ["2/22", "1/21", "12/17"],
         "nextFertilizer": "3/22",
-        "repottingHistory": ["8/2023", "9/2023"],
+        "repottingHistory": [1690873200, 1693551600],
+        "repottingCadenceInDays": 365,
+        "nextRepotDate": 1725174000,
         "notes": "add misc notes here",
         "imageName": "monsterapic"
     },
@@ -49,7 +53,9 @@
         "nextSoilCheck": "3/10",
         "fertilizerDates": ["2/22", "12/21"],
         "nextFertilizer": "",
-        "repottingHistory": ["1/2024"],
+        "repottingHistory": [1704096000],
+        "repottingCadenceInDays": 365,
+        "nextRepotDate": 1735718400,
         "notes": "",
         "imageName": "jadesatinpothosvariegatedpic"
     },
@@ -67,7 +73,9 @@
         "nextSoilCheck": "3/10",
         "fertilizerDates": ["2/22", "12/21", "11/26"],
         "nextFertilizer": "",
-        "repottingHistory": ["9/2023", "2/2024"],
+        "repottingHistory": [1706853676, 1693551600, 1706774400],
+        "repottingCadenceInDays": 30,
+        "nextRepotDate": 1709359276,
         "notes": "",
         "imageName": "minimonsterapic"
     }
