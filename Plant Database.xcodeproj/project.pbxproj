@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD12870E2BCB7F7C00D9FDA0 /* TopNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD12870D2BCB7F7C00D9FDA0 /* TopNavViewController.swift */; };
+		AD1287342BCBB49000D9FDA0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1287332BCBB49000D9FDA0 /* SettingsView.swift */; };
+		AD1287362BCBB4F000D9FDA0 /* BulkActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1287352BCBB4F000D9FDA0 /* BulkActionView.swift */; };
+		AD1287382BCBB50400D9FDA0 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1287372BCBB50400D9FDA0 /* AddView.swift */; };
+		AD12873A2BCBB51200D9FDA0 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1287392BCBB51200D9FDA0 /* ReportsView.swift */; };
 		ADF868DC2B99269A0039C5EC /* Plant_DatabaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868DB2B99269A0039C5EC /* Plant_DatabaseApp.swift */; };
 		ADF868DE2B99269A0039C5EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868DD2B99269A0039C5EC /* ContentView.swift */; };
 		ADF868E02B99269C0039C5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADF868DF2B99269C0039C5EC /* Assets.xcassets */; };
@@ -16,12 +21,17 @@
 		ADF868EE2B9937500039C5EC /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868ED2B9937500039C5EC /* Plant.swift */; };
 		ADF868F02B993FD70039C5EC /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868EF2B993FD70039C5EC /* ModelData.swift */; };
 		ADF868F52B9940D20039C5EC /* PlantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F42B9940D20039C5EC /* PlantRow.swift */; };
-		ADF868F72B9949A00039C5EC /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F62B9949A00039C5EC /* PlantList.swift */; };
+		ADF868F72B9949A00039C5EC /* OverviewTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F62B9949A00039C5EC /* OverviewTab.swift */; };
 		ADF868F92B994AFE0039C5EC /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868F82B994AFE0039C5EC /* PlantDetail.swift */; };
 		ADF868FB2B9958210039C5EC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF868FA2B9958210039C5EC /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD12870D2BCB7F7C00D9FDA0 /* TopNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavViewController.swift; sourceTree = "<group>"; };
+		AD1287332BCBB49000D9FDA0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AD1287352BCBB4F000D9FDA0 /* BulkActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkActionView.swift; sourceTree = "<group>"; };
+		AD1287372BCBB50400D9FDA0 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		AD1287392BCBB51200D9FDA0 /* ReportsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
 		ADF868D82B99269A0039C5EC /* Plant Database.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Database.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF868DB2B99269A0039C5EC /* Plant_DatabaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_DatabaseApp.swift; sourceTree = "<group>"; };
 		ADF868DD2B99269A0039C5EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,7 +42,7 @@
 		ADF868ED2B9937500039C5EC /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		ADF868EF2B993FD70039C5EC /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		ADF868F42B9940D20039C5EC /* PlantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRow.swift; sourceTree = "<group>"; };
-		ADF868F62B9949A00039C5EC /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
+		ADF868F62B9949A00039C5EC /* OverviewTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewTab.swift; sourceTree = "<group>"; };
 		ADF868F82B994AFE0039C5EC /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
 		ADF868FA2B9958210039C5EC /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +102,13 @@
 				ADF868FC2B9958C80039C5EC /* Plants */,
 				ADF868DD2B99269A0039C5EC /* ContentView.swift */,
 				ADF868F42B9940D20039C5EC /* PlantRow.swift */,
-				ADF868F62B9949A00039C5EC /* PlantList.swift */,
+				ADF868F62B9949A00039C5EC /* OverviewTab.swift */,
 				ADF868F82B994AFE0039C5EC /* PlantDetail.swift */,
+				AD12870D2BCB7F7C00D9FDA0 /* TopNavViewController.swift */,
+				AD1287332BCBB49000D9FDA0 /* SettingsView.swift */,
+				AD1287352BCBB4F000D9FDA0 /* BulkActionView.swift */,
+				AD1287372BCBB50400D9FDA0 /* AddView.swift */,
+				AD1287392BCBB51200D9FDA0 /* ReportsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,15 +217,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1287382BCBB50400D9FDA0 /* AddView.swift in Sources */,
 				ADF868DE2B99269A0039C5EC /* ContentView.swift in Sources */,
 				ADF868EE2B9937500039C5EC /* Plant.swift in Sources */,
+				AD1287362BCBB4F000D9FDA0 /* BulkActionView.swift in Sources */,
 				ADF868F02B993FD70039C5EC /* ModelData.swift in Sources */,
 				ADF868FB2B9958210039C5EC /* FavoriteButton.swift in Sources */,
 				ADF868DC2B99269A0039C5EC /* Plant_DatabaseApp.swift in Sources */,
 				ADF868F52B9940D20039C5EC /* PlantRow.swift in Sources */,
 				ADF868EA2B99317E0039C5EC /* PlantImage.swift in Sources */,
 				ADF868F92B994AFE0039C5EC /* PlantDetail.swift in Sources */,
-				ADF868F72B9949A00039C5EC /* PlantList.swift in Sources */,
+				AD12873A2BCBB51200D9FDA0 /* ReportsView.swift in Sources */,
+				AD12870E2BCB7F7C00D9FDA0 /* TopNavViewController.swift in Sources */,
+				ADF868F72B9949A00039C5EC /* OverviewTab.swift in Sources */,
+				AD1287342BCBB49000D9FDA0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
