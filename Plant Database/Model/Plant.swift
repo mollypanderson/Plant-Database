@@ -20,8 +20,14 @@ struct Plant: Hashable, Codable, Identifiable {
     var repottingHistory: Array<Date>
     var repottingCadenceInDays: Int
     var nextRepotDate: Date
+    var nextSoilCheck: Date
+    var nextFertilizer: Date
     var overdue: Bool {
-        return nextRepotDate < Date();
+        return (
+            nextRepotDate < Date()
+            || nextSoilCheck < Date()
+            || nextFertilizer < Date()
+        );
     }
     
     private var imageName: String

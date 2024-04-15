@@ -38,53 +38,51 @@ struct OverviewTab: View {
     var body: some View {
         NavigationView {
             List {
-                Section() {
-                    ForEach(overduePlants) {
-                        plant in NavigationLink {
-                            PlantDetail(plant: plant)
-                        } label: {
-                            VStack(alignment: .leading) {
+                    Section() {
+                        ForEach(overduePlants) {
+                            plant in VStack {
                                 PlantRow(plant: plant)
                             }
-                        }
-                        
-                    }
-                } header: {
-                    Section {
-                        Text("Past due")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                             
+                        }
+                    } header: {
+                        Section {
+                            Text("Past due")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                                
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 65, alignment: .leading)
+                        .background(pastDueHeader)
                     }
-                    .frame(maxWidth: .infinity, minHeight: 65, alignment: .leading)
-                    .background(pastDueHeader)
-                }
-                Section {
-                    ForEach(upcomingPlants) {
-                        plant in NavigationLink {
-                            PlantDetail(plant: plant)
-                        } label: {
-                            VStack(alignment: .leading) {
-                                PlantRow(plant: plant)
+                    .listRowInsets(EdgeInsets())
+                    Section {
+                        ForEach(upcomingPlants) {
+                            plant in NavigationLink {
+                                PlantDetail(plant: plant)
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    PlantRow(plant: plant)
+                                }
                             }
-                        }
-                        
-                    }
-                } header: {
-                    Section {
-                        Text("Upcoming")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                             
+                        }
+                    } header: {
+                        Section {
+                            Text("Upcoming")
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                                
+                        }
+                        .frame(maxWidth: .infinity, minHeight: 65, alignment: .leading)
+                        .background(upcomingColor)
                     }
-                    .frame(maxWidth: .infinity, minHeight: 65, alignment: .leading)
-                    .background(upcomingColor)
-                }
+                    .listRowInsets(EdgeInsets())
             }
             .listStyle(.plain)
-            .animation(.default, value: allPlants)
+         //   .animation(.default, value: allPlants)
             .navigationTitle("My Plant Database")
             .navigationBarTitleDisplayMode(.inline)
             .fontWeight(.regular)
@@ -116,11 +114,8 @@ struct OverviewTab: View {
                 }
             }
         }
-        }
     }
-        
-
-
+}
 
 #Preview {
     OverviewTab()
