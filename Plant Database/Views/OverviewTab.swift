@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct OverviewTab: View {
-    @Environment(ModelData.self) var modelData
+    
+    let allPlants: [Plant]
+    @Environment(\.modelContext) private var context
+    
+   // @Environment(ModelData.self) var modelData
     @State private var showFavoritesOnly = false
     
     @State private var showingSort = false
@@ -19,18 +24,18 @@ struct OverviewTab: View {
     var pastDueHeader = Color(red: 215.0 / 255, green: 155.0 / 255, blue: 100.0 / 255)
     var upcomingColor = Color(red: 145.0 / 255, green: 128.0 / 255, blue: 99.0 / 255)
 
-    var allPlants: [Plant] {
-        modelData.plants
-    }
+//    var allPlants: [Plant] {
+//        plants
+//    }
     
     var overduePlants: [Plant] {
-        modelData.plants.filter { plant in
+        allPlants.filter { plant in
             (plant.overdue)
         }
     }
     
     var upcomingPlants: [Plant] {
-        modelData.plants.filter { plant in
+        allPlants.filter { plant in
             (!plant.overdue)
         }
     }
@@ -39,7 +44,7 @@ struct OverviewTab: View {
         NavigationView {
             List {
                     Section() {
-                        ForEach(overduePlants) {
+                        ForEach(overduePlants, id: \.id) {
                             plant in VStack {
                                 PlantRow(plant: plant)
                             }
@@ -58,7 +63,7 @@ struct OverviewTab: View {
                     }
                     .listRowInsets(EdgeInsets())
                     Section {
-                        ForEach(upcomingPlants) {
+                        ForEach(upcomingPlants, id: \.id) {
                             plant in NavigationLink {
                                 PlantDetail(plant: plant)
                             } label: {
@@ -118,6 +123,10 @@ struct OverviewTab: View {
 }
 
 #Preview {
-    OverviewTab()
-        .environment(ModelData())
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Plant.self, configurations: config)
+
+    let allPlants = Plant.sampleData
+    return OverviewTab(allPlants: allPlants)
+        .modelContainer(container)
 }

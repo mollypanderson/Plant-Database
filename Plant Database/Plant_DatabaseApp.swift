@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct Plant_DatabaseApp: App {
-    @State private var modelData = ModelData()
+   // @StateObject private var modelData = ModelData()
+    @Query(sort: \Plant.id, order: .reverse) private var plants: [Plant]
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(modelData)
         }
+        .modelContainer (for: [Plant.self])
     }
 }

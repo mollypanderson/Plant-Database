@@ -6,24 +6,28 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct PlantDetail: View {
-    @Environment(ModelData.self) var modelData
-    var plant: Plant
+    @State private var commonName: String = ""
+    @State private var scientificName: String = ""
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
     
-    var plantIndex: Int {
-        modelData.plants.firstIndex(where: { $0.id == plant.id })!
-    }
+    let plant: Plant
+    
+//    var plantIndex: Int {
+//        plant.firstIndex(where: { $0.id == plant.id })!
+//    }
     
     var body: some View {
-        @Bindable var modelData = modelData
-        
+        @State var isFavorite: Bool = plant.isFavorite
         ScrollView {
             VStack(alignment: .leading) {
                 HStack {
                     Text(plant.commonName)
                         .font(.title)
-                    FavoriteButton(isSet: $modelData.plants[plantIndex].isFavorite)
+                    FavoriteButton(isSet: $isFavorite)
                 }
 
 
@@ -56,7 +60,14 @@ struct PlantDetail: View {
 }
 
 #Preview {
-    let modelData = ModelData()
-    return PlantDetail(plant: ModelData().plants[0])
-        .environment(modelData)
+  //  let modelContext = ModelContext()
+  //  return PlantDetail(plant: ModelData().plants[0])
+  //      .environment(modelData)
+    
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Plant.self, configurations: config)
+
+    let plants = Plant.sampleData
+    return PlantDetail(plant: plants[0])
+        .modelContainer(container)
 }

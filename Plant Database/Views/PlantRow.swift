@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct PlantRow: View {
     
@@ -13,12 +14,15 @@ struct PlantRow: View {
     var deepGreen = Color(red: 92.0 / 255, green: 134.0 / 255, blue: 81.0 / 255)
     var overdueRed = Color(red: 171.0 / 255, green: 33.0 / 255, blue: 33.0 / 255)
     
-    var actionItems = ["repot"]
+    @State var showRepotAction = false;
+    @State var showDidYouWaterItAction = false;
+    
+    var actionItemsDisplayed: CGFloat = 1;
     
     // Locale and calendar
     let gregorianCalendar = Calendar(identifier: .gregorian)
     
-    func showRepotActionItem() -> AnyView {
+     func showRepotActionItem() -> AnyView {
         return AnyView(
             VStack {
             VStack(alignment: .leading, spacing: 10) {
@@ -57,14 +61,16 @@ struct PlantRow: View {
             .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
             .frame(maxWidth: .infinity, alignment: .leading)
             .swipeActions(allowsFullSwipe: false) {
-                    Button {
-                        print("ok")
+                Button(role: .destructive) {
+                       print("goodbye")
                     } label: {
                         Label("Dismiss", systemImage: "zzz")
                     }
                     .tint(.gray)
-                    Button {
-                        print("ok")
+                    Button(role: .destructive) {
+                    //    showCheckSoilMoistureView.toggle()
+                    //    plant.nextSoilCheck = 1714471991;
+                        showDidYouWaterItAction.toggle()
                     } label: {
                         Label("Done", systemImage: "checkmark")
                     }
@@ -100,6 +106,10 @@ struct PlantRow: View {
             }
         }
         )
+    }
+    
+    private func showDidYouWaterItActionView() -> some View {
+        Text("hiya buddy")
     }
     
     func daysOverUnderText(nextActionDate: Date) -> AnyView {
@@ -138,7 +148,7 @@ struct PlantRow: View {
     
     var body: some View {
         var oneWeekFromToday = Calendar.current.date(byAdding: .day, value: 7, to: Date());
-  
+        
         VStack {
             VStack {
                 Text(plant.commonName)
@@ -166,10 +176,13 @@ struct PlantRow: View {
                     if (plant.nextFertilizer <= oneWeekFromToday!) {
                         showFertilizerActionItem()
                     }
+                    if (showDidYouWaterItAction) {
+                        showDidYouWaterItActionView()
+                    }
                 }
                 .listStyle(.plain)
-                .frame(minHeight: 100)
             }
+            .frame(minHeight: 225, maxHeight: .infinity)
         }
         
             
@@ -179,9 +192,21 @@ struct PlantRow: View {
 }
 
 #Preview {
-    let plants = ModelData().plants
+//    let plants = ModelData().plants
+//    return Group {
+//        PlantRow(plant: plants[1])
+//    }
+    
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Plant.self, configurations: config)
+
+    let plants = Plant.sampleData
     return Group {
-        PlantRow(plant: plants[3])
+        PlantRow(plant: plants[1])
+            .modelContainer(container)
     }
+    
+  //  (allPlants: allPlants)
+  //      .modelContainer(container)
     
 }
