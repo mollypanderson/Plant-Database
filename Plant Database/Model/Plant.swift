@@ -17,6 +17,18 @@ struct Plant: Hashable, Codable, Identifiable {
     var potSizeInInches: Int
     var soilMix: String
     var isFavorite: Bool
+    var repottingHistory: Array<Date>
+    var repottingCadenceInDays: Int
+    var nextRepotDate: Date
+    var nextSoilCheck: Date
+    var nextFertilizer: Date
+    var overdue: Bool {
+        return (
+            nextRepotDate < Date()
+            || nextSoilCheck < Date()
+            || nextFertilizer < Date()
+        );
+    }
     
     private var imageName: String
     var image: Image {
